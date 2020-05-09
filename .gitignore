@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# angular build
+dist/
+
+# vs code
+.vscode/
+
+# syntax configs
+.eslintrc.json
+.editorconfig

@@ -1,5 +1,5 @@
 # Subscription Management Web UI
-Web Ui for the Subscription Management project [here](https://github.com/cjhetzle/PayPalProject).
+Web Ui for the Subscription Management project [here](https://github.com/cjhetzle/SubscriptionManagementExtensions).
 
 ## Installation
 

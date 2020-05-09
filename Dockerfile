@@ -11,7 +11,7 @@ RUN npm install
 RUN npm install -g @angular/cli@9.1.1
 
 COPY . /app
-RUN ng build Paypal --output-path=dist
+RUN ng build Paypal --prod --output-path=dist
 
 # dist
 FROM nginx:1.17.10-alpine as dist

@@ -1,0 +1,13 @@
+<app-checkout></app-checkout>
+<div class="w-50 mx-auto bg-light rounded" stype="height: 100%">
+        <table class="table">
+            <thead>
+                <th scope="col"><h2>Avaliable Services</h2></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let service of GetServices()">
+                    <app-service-row [service]=service></app-service-row>
+                </tr>
+            </tbody>
+        </table>
+</div>

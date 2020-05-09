@@ -1,0 +1,6 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'bootstrap/scss/bootstrap.scss';
+html, body { height:100% };
+.paypal-purchase-dialog .mat-dialog-container {
+    background-color: theme-color("dark");
+};

@@ -1,0 +1,25 @@
+<div class="bg-light float-right w-25 rounded">
+    <table class="table">
+        <thead>
+            <th><h2>Item</h2></th>
+            <th><h2>Cost</h2></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cartItem of GetCart()">
+                <td><h3 class="d-inline">{{cartItem.name}}</h3></td>
+                <td><h3 class="d-inline">{{cartItem.price}}</h3></td>
+                <td>
+                    <button type="button" class="close" aria-label="close" (click)="RemoveFromCart(cartItem)" >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><h3 class="d-inline">Total</h3></td>
+                <td><h3 class="d-inline">{{Total()}}</h3></td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="OnBuy()" class="button btn-primary rounded"><h2>Buy</h2></button>
+</div>

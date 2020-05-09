@@ -1,0 +1,133 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Paypal": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/Paypal",
+      "sourceRoot": "projects/Paypal/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/Paypal",
+            "index": "projects/Paypal/src/index.html",
+            "main": "projects/Paypal/src/main.ts",
+            "polyfills": "projects/Paypal/src/polyfills.ts",
+            "tsConfig": "projects/Paypal/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/Paypal/src/favicon.ico",
+              "projects/Paypal/src/assets"
+            ],
+            "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "projects/Paypal/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/Paypal/src/environments/environment.ts",
+                  "with": "projects/Paypal/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "Paypal:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Paypal:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "Paypal:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/Paypal/src/test.ts",
+            "polyfills": "projects/Paypal/src/polyfills.ts",
+            "tsConfig": "projects/Paypal/tsconfig.spec.json",
+            "karmaConfig": "projects/Paypal/karma.conf.js",
+            "assets": [
+              "projects/Paypal/src/favicon.ico",
+              "projects/Paypal/src/assets"
+            ],
+            "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "projects/Paypal/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/Paypal/tsconfig.app.json",
+              "projects/Paypal/tsconfig.spec.json",
+              "projects/Paypal/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/Paypal/e2e/protractor.conf.js",
+            "devServerTarget": "Paypal:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "Paypal:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "422c0df2-8169-4495-86ad-1f8d772c9355"
+  },
+  "defaultProject": "Paypal"
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "6ccb0576-842f-11ea-8332-f83441083c1f",
+        "name": "Netflix",
+        "price": 8.99,
+        "iconUrl": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png",
+        "color": "ff0000"
+    },
+    {
+        "id": "6ccf9935-842f-11ea-9d50-f83441083c1f",
+        "name": "crunchyroll",
+        "price": 7.99,
+        "iconUrl": "https://www.crunchyroll.com/favicons/favicon-16x16.png",
+        "color": "ffa500"
+    },
+    {
+        "id": "6ccf9934-842f-11ea-86f9-f83441083c1f",
+        "name": "Spotify",
+        "price": 9.99,
+        "iconUrl": "https://open.scdn.co/cdn/images/favicon16.19fc3918.png",
+        "color": "1DB954"
+    },
+    {
+        "id": "6ccfc04a-842f-11ea-9a7a-f83441083c1f",
+        "name": "Nintendo Online",
+        "price": 2.92,
+        "iconUrl": "https://www.nintendo.com/etc.clientlibs/noa/clientlibs/clientlib-ncom/resources/images/latam/favicon.ico",
+        "color": "e4000f"
+    }
+]
